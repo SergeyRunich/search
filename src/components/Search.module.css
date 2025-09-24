@@ -1,0 +1,145 @@
+:root {
+    --color-bg: #ffffff;
+    --color-border: #e0e0e0;
+    --color-border-hover: #c0c0c0;
+    --color-text: #222222;
+    --color-muted: #666666;
+    --color-primary: #2a7dfc;
+    --color-primary-light: #e7f0ff;
+    --color-error: #d32f2f;
+  }
+  
+  .container {
+    border: 1px solid var(--color-border);
+    padding: 20px;
+    border-radius: 10px;
+    background: var(--color-bg);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+    font-family: system-ui, sans-serif;
+  }
+  
+  .controls {
+    margin-bottom: 12px;
+  }
+  
+  .label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    font-size: 15px;
+    color: var(--color-text);
+  }
+  
+  .inputRow {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .input {
+    flex: 1;
+    padding: 14px 16px;
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    font-size: 17px;
+    color: var(--color-text);
+    transition: border-color 0.2s;
+  }
+  
+  .input:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 2px var(--color-primary-light);
+  }
+  
+  .clearBtn {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 6px 8px;
+    font-size: 18px;
+    color: var(--color-muted);
+    transition: color 0.2s;
+  }
+  
+  .clearBtn:hover {
+    color: var(--color-primary);
+  }
+  
+  .loadingArea {
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .spinner {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    border: 3px solid #ccc;
+    border-top-color: var(--color-primary);
+    animation: spin 0.9s linear infinite;
+  }
+  
+  @keyframes spin {
+    to { transform: rotate(360deg); }
+  }
+  
+  .meta {
+    margin-top: 8px;
+    color: var(--color-muted);
+    font-size: 13px;
+  }
+  
+  .results {
+    margin-top: 16px;
+  }
+  
+  .list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border-top: 1px solid var(--color-border);
+  }
+  
+  .item {
+    padding: 14px 16px;
+    border-bottom: 1px solid var(--color-border);
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  
+  .item:hover {
+    background: #fafafa;
+  }
+  
+  .highlight {
+    background: var(--color-primary-light);
+  }
+  
+  .itemTitle {
+    font-weight: 600;
+    font-size: 16px;
+    color: var(--color-text);
+  }
+  
+  .itemDesc {
+    font-size: 14px;
+    color: var(--color-muted);
+    margin-top: 4px;
+  }
+  
+  .empty,
+  .error,
+  .smallNote {
+    padding: 14px 16px;
+    font-size: 15px;
+    color: var(--color-muted);
+  }
+  
+  .error {
+    color: var(--color-error);
+    font-weight: 500;
+  }
